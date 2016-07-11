@@ -1,2 +1,14 @@
-<img src='gun.svg' />
-{{yield}}
+<h3>{{incident.state}} - {{incident.numInvolved}}</h3>
+{{#each incident.numInjuredArray as |injured| }}
+  {{gun-icon color='black'}}
+{{else}}
+  Nothing here.
+{{/each}}
+{{#each incident.numKilledArray as |killed| }}
+  {{gun-icon color='red'}}
+{{else}}
+  Nothing here.
+{{/each}}
+
+{{link-to 'View Details' 'incident' incident.id}}
+

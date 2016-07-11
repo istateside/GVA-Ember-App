@@ -1,4 +1,3 @@
 {{#each incidents as |incident|}}
-  <h3>{{incident.state}} - {{incident.numKilled}}</h3>
-  {{link-to 'View Details' 'incident' incident.id}}
+  {{incident-display incident=incident}}
 {{/each}}
