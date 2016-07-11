@@ -9,8 +9,16 @@ export default Model.extend({
   date_as_utc: attr('string'),
   numKilled: attr('number'),
   numInjured: attr('number'),
-  numInvolved: Ember.computed('numKilled', 'numInjured', () => numKilled + numInjured),
-  numKilledArray: Ember.computed('numKilled', () => Array.new(numKilled)),
-  numInjuredArray: Ember.computed('numInjured', () => Array.new(numInjured)),
-  numInvolvedArray: Ember.computed('numInvolved', () => Array.new(numInvolved))
+  numInvolved: Ember.computed('numKilled', 'numInjured', function() {
+    return this.get('numKilled') + this.get('numInjured');
+  }),
+  numKilledArray: Ember.computed('numKilled', function() {
+    return new Array(this.get('numKilled'));
+  }),
+  numInjuredArray: Ember.computed('numInjured', function() {
+    return new Array(this.get('numInjured'));
+  }),
+  numInvolvedArray: Ember.computed('numInvolved', function() {
+    return new Array(this.get('numInvolved'));
+  })
 });
