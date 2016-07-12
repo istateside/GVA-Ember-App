@@ -14,7 +14,7 @@ export default Model.extend({
     return this.get('numKilled') + this.get('numInjured');
   }),
   numKilledArray: Ember.computed('numKilled', function() {
-    return new Array(this.get('numKilled'));
+    return new Ember.Array(this.get('numKilled'));
   }),
   numInjuredArray: Ember.computed('numInjured', function() {
     return new Array(this.get('numInjured'));

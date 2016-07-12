@@ -1,0 +1,19 @@
+.gun-icon {
+  display: inline-block;
+  list-style: none;
+}
+
+.incident-display {
+
+  &__icon-list {
+    display: inline-block;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  a {
+    display: block;
+  }
+
+
+}

@@ -1,3 +1,12 @@
 {{#each incidents as |incident|}}
-  {{incident-display incident=incident}}
+  {{incident-display 
+      incident=incident 
+      state=incident.state 
+      city=incident.city 
+      address=incident.address 
+      numKilled=incident.numKilled 
+      numInjured=incident.numInjured
+      numInvolved=incident.numInvolved
+  }}
+ 
 {{/each}}
