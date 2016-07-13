@@ -1,17 +1,17 @@
-<h3 class='incident-display__title'>{{city}}, {{state}} - {{numInvolved}}</h3>
-{{#if numInvolved}}
+<h3 class='incident-display__title'>{{incident.city}}, {{incident.state}} - {{incident.numInvolved}} - {{incident.formattedDate}}</h3>
+{{#if incident.numInvolved}}
   <ul class='incident-display__icon-list'>
-    {{#if numInjured}}
-      {{#each (range 1 numInjured)}}
+    {{#if incident.numInjured}}
+      {{#each (range 1 incident.numInjured)}}
         {{gun-icon color='black'}}
       {{/each}}
     {{/if}}
 
-    {{#if numKilled}}
-      {{#each (range 1 numKilled)}}
+    {{#if incident.numKilled}}
+      {{#each (range 1 incident.numKilled)}}
         {{gun-icon color='red'}}
       {{/each}}
     {{/if}}
   </ul>
 {{/if}}
-{{link-to 'View Details' 'incident' incident.id}}
+

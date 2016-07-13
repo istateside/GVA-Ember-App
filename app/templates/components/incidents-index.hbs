@@ -7,6 +7,7 @@
       numKilled=incident.numKilled 
       numInjured=incident.numInjured
       numInvolved=incident.numInvolved
+      date=incident.formattedDate
   }}
- 
+  {{link-to 'View Details' 'incidents.incident' incident.id}}
 {{/each}}

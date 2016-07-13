@@ -1,5 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames: ['incident-display']
+  classNames: ['incident-display'],
+  isActive: true
 });
