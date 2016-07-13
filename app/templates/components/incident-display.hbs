@@ -1,14 +1,14 @@
-<h3 class='incident-display__title'>{{state}} - {{numInvolved}}</h3>
+<h3 class='incident-display__title'>{{city}}, {{state}} - {{numInvolved}}</h3>
 {{#if numInvolved}}
   <ul class='incident-display__icon-list'>
     {{#if numInjured}}
-      {{#each (range 0 numInjured)}}
+      {{#each (range 1 numInjured)}}
         {{gun-icon color='black'}}
       {{/each}}
     {{/if}}
 
     {{#if numKilled}}
-      {{#each (range 0 numKilled)}}
+      {{#each (range 1 numKilled)}}
         {{gun-icon color='red'}}
       {{/each}}
     {{/if}}
